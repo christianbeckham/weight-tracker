@@ -15,10 +15,25 @@ const App = () => {
 	};
 
 	return (
-		<div className="App">
-			<EntryList entries={entries} />
-			<EntryForm addEntry={addEntry} />
-      <EntryChart chartData={entries} />
+		<div className="container-fluid">
+			<div className="row">
+				<h3 className="m-3">
+					Weight<small className="text-muted">Tracker</small>
+				</h3>
+				<div className="col-md-6">
+					<div className="border m-3 p-5">
+						<EntryList entries={entries} />
+					</div>
+					<div className="border m-3 p-5">
+						<EntryForm addEntry={addEntry} />
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="border m-3 p-5">
+						<EntryChart chartData={entries} />
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

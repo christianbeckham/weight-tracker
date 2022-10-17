@@ -5,8 +5,11 @@ const EntryChart = (props) => {
 	const [chartData, setChartData] = useState([]);
 
 	useEffect(() => {
-		let chartDataArr = props.chartData.map((entry) => [entry.date, entry.weight]);
-    setChartData(chartDataArr)
+		let chartDataArr = props.chartData.map((entry) => [
+			entry.date,
+			entry.weight,
+		]);
+		setChartData(chartDataArr);
 	}, [props.chartData]);
 
 	return (

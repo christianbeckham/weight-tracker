@@ -17,21 +17,29 @@ const EntryForm = (props) => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<label>Weight</label>
-			<input
-				type="number"
-				name="weight"
-				value={inputs.weight || ""}
-				onChange={handleChange}
-			/>
-			<label>Date</label>
-			<input
-				type="date"
-				name="date"
-				value={inputs.date || ""}
-				onChange={handleChange}
-			/>
-			<button type="submit">Submit</button>
+			<div className="form-group">
+				<label>Weight</label>
+				<input
+					type="number"
+					name="weight"
+					value={inputs.weight || ""}
+					onChange={handleChange}
+					className="form-control"
+				/>
+			</div>
+			<div className="form-group">
+				<label>Date</label>
+				<input
+					type="date"
+					name="date"
+					value={inputs.date || ""}
+					onChange={handleChange}
+					className="form-control"
+				/>
+			</div>
+			<button type="submit" className="btn btn-primary mt-3">
+				Submit
+			</button>
 		</form>
 	);
 };

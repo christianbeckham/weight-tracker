@@ -2,13 +2,15 @@ import React from "react";
 
 const EntryList = (props) => {
 	return (
-		<table>
-			<tbody>
+		<table className="table">
+			<thead className="thead-dark">
 				<tr>
-					<th>Entry</th>
-					<th>Weight</th>
-					<th>Date</th>
+					<th scope="col">Entry</th>
+					<th scope="col">Weight</th>
+					<th scope="col">Date</th>
 				</tr>
+			</thead>
+			<tbody>
 				{props.entries.map((entry, index) => (
 					<tr key={index}>
 						<td>{index + 1}</td>
