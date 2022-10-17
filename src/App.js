@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EntryList from "./components/EntryList/EntryList";
 import EntryForm from "./components/EntryForm/EntryForm";
+import EntryChart from "./components/EntryChart/EntryChart";
 
 const App = () => {
 	const [entries, setEntries] = useState([
@@ -17,6 +18,7 @@ const App = () => {
 		<div className="App">
 			<EntryList entries={entries} />
 			<EntryForm addEntry={addEntry} />
+      <EntryChart chartData={entries} />
 		</div>
 	);
 };
