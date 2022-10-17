@@ -9,7 +9,7 @@ const EntryList = (props) => {
 				<th>Date</th>
 			</tr>
 			{props.entries.map((entry, index) => (
-				<tr>
+				<tr key={index}>
 					<td>{index + 1}</td>
 					<td>{entry.weight}</td>
 					<td>{entry.date}</td>
