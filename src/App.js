@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EntryList from "./components/EntryList/EntryList";
+import EntryForm from "./components/EntryForm/EntryForm";
 
 const App = () => {
 	const [entries, setEntries] = useState([
@@ -10,6 +11,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<EntryList entries={entries} />
+			<EntryForm />
 		</div>
 	);
 };
