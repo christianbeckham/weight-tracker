@@ -8,10 +8,15 @@ const App = () => {
 		{ weight: 177, date: "10-17-2022" },
 	]);
 
+	const addEntry = (entry) => {
+		let newEntries = [entry, ...entries];
+		setEntries(newEntries);
+	};
+
 	return (
 		<div className="App">
 			<EntryList entries={entries} />
-			<EntryForm />
+			<EntryForm addEntry={addEntry} />
 		</div>
 	);
 };
